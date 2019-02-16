@@ -1,0 +1,139 @@
+html, body {
+    background: grey;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+#bezel {
+    background: black;
+    width: 420px;
+    margin: 0 auto;
+    padding: 5px 5px 15px;
+    border-radius: 10px;
+}
+
+#title {
+    text-align: center;
+    color: white;
+    margin: unset;
+    margin-bottom: 5px;
+}
+
+#description {
+    width: 400px;
+    text-align: justify;
+    margin: 0 auto 10px;
+    padding: 5px;
+}
+
+#survey-form {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px 0 10px 0;
+    background: white;
+    border-radius: 3px;
+}
+
+.form-group {
+    display: flex;
+    padding: 5px;
+}
+
+.labels {
+    width: 200px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding-left: 5px;
+}
+
+.input-field {
+    width: 100%;
+    height: 30px;
+}
+
+.input-button {
+    display: inline;
+}
+
+.submit-button {
+    display: block;
+    margin: 15px 0 0 215px;
+    width: 200px;
+    height: 30px;
+}
+
+#footerTop {
+    padding: 25px;
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    height: 25px;
+    width: 100%;
+    bottom: 0;
+}
+
+footer > a {
+    font-weight: 500;
+    color: black;
+    padding: 6px;
+    font-size: 1rem;
+}
+
+@media (max-width: 450px) {
+    body {
+        background: black;
+    }
+
+    #bezel {
+        background: unset;
+        width: unset;
+        margin: unset;
+        padding: unset;
+        border-radius: 0;
+    }
+
+    #survey-form {
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    #description {
+        width: unset;
+        padding: 0 15px;
+    }
+
+    .form-group {
+        display: unset;
+    }
+
+    .labels {
+        text-align: unset;
+        padding-left: 5px;
+        margin: 10px 0 5px;
+        width: unset;
+    }
+
+    .input-section {
+        width: unset;
+    }
+    
+    .submit-button {
+        margin: unset;
+        margin-left: 10px;
+    }
+}
