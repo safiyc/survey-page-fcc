@@ -1,43 +1,73 @@
 html, body {
     background: grey;
+    background: url(https://images.unsplash.com/photo-1506508618093-6fe5ce3def4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80);
+    background-repeat: repeat-x;
+    background-size: cover;
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: calc(100% - 70px);  /* to account for #bezel's margin-top pushing footer */
 }
 
 #wrapper {
-    min-height: 100%;
+    min-height: calc(100% + 70px); /* to account for #bezel's margin-top pushing footer */
     position: relative;
+   background: url(https://images.unsplash.com/photo-1506508618093-6fe5ce3def4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #bezel {
+    position: relative;
     background: black;
-    width: 420px;
-    margin: 0 auto;
-    padding: 5px 5px 15px;
+    width: 450px;
+    margin: 70px auto 0;
+    padding: 50px 7px 75px;
     border-radius: 10px;
+    box-shadow: inset 0 0 3px 1px rgba(255,255,255, .9), inset 13px 0 0 0 rgba(255,255,255,.45), inset -7px 0 0 0 rgba(255,255,255, .25), 1px 3px 20px 1px black;
+}
+
+#camera {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background: black;
+    box-shadow: inset 0 0 5px 2px rgba(255,255,255,.25), inset 0 0 5px 5px rgba(255,255,255,.15);
+}
+
+#intro {
+    background: aliceblue;
+    box-shadow: inset 7px 0 0 0 rgba(255,255,255,.95), inset -2px 0 0 0 rgba(255,255,255, .85);
 }
 
 #title {
+    text-transform: uppercase;
+    font-size: 30px;
     text-align: center;
-    color: white;
     margin: unset;
     margin-bottom: 5px;
 }
 
 #description {
-    width: 400px;
+    width: 425px;
     text-align: justify;
-    margin: 0 auto 10px;
+    margin: 0 auto;
     padding: 5px;
 }
 
+hr {
+    margin: 0 0 10px 0;
+}
+
 #survey-form {
-    width: fit-content;
     margin: 0 auto;
-    padding: 5px 0 10px 0;
     background: white;
     border-radius: 3px;
+    padding-bottom: 5px;
 }
 
 .form-group {
@@ -46,7 +76,8 @@ html, body {
 }
 
 .labels {
-    width: 200px;
+    width: 220px;
+    font-weight: 600;
     text-align: right;
     padding-right: 5px;
 }
@@ -54,24 +85,46 @@ html, body {
 .input-section {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 220px;
     padding-left: 5px;
 }
 
-.input-field {
-    width: 100%;
-    height: 30px;
+/* checkbox/radio buttons */
+input {
+    display: inline;
+    margin: 0 5px 5px 0;
 }
 
-.input-button {
-    display: inline;
+/* text fields */
+.input-field, select {
+    box-sizing: border-box;
+    height: 25px;
+    width: 100%;
 }
 
 .submit-button {
     display: block;
-    margin: 15px 0 0 215px;
-    width: 200px;
-    height: 30px;
+    background: lightgreen;
+    border: none;
+    margin: 25px auto 10px;
+    width: 100px;
+    height: 45px;
+    border: 1px solid white;
+    border-bottom: 1px solid green;
+    border-radius: 3px;
+    box-shadow: 0 0 3px 0 black;
+}
+
+.submit-button:hover {
+    background: green;
+    border: 1px solid lightgreen;
+    border-bottom: 1px solid darkgreen;
+}
+
+.submit-button:active {
+    outline: none;
+    background: palegreen;
+    border: none;
 }
 
 #footerTop {
@@ -87,29 +140,51 @@ footer {
 }
 
 footer > a {
-    font-weight: 500;
+    background: rgba(255,255,255,.5);
+    font-weight: 600;
     color: black;
     padding: 6px;
     font-size: 1rem;
+    text-decoration: none;
 }
 
 @media (max-width: 450px) {
-    body {
-        background: black;
+    html, body {
+        height: 100%;
     }
-
+  
+    #wrapper {
+       min-height: 100%;
+    }
+  
     #bezel {
-        background: unset;
+        background: black;
         width: unset;
         margin: unset;
         padding: unset;
         border-radius: 0;
     }
+  
+    #camera {
+        display: none;
+    }
 
     #survey-form {
         display: flex;
         flex-direction: column;
+        padding-top: unset;
         border-radius: 0;
+    }
+  
+    #intro {
+        box-shadow: unset;
+    }
+  
+    #title {
+        background: black;
+        color: white;
+        height: 60px;
+        padding-top: 30px;
     }
 
     #description {
@@ -130,10 +205,5 @@ footer > a {
 
     .input-section {
         width: unset;
-    }
-    
-    .submit-button {
-        margin: unset;
-        margin-left: 10px;
     }
 }

@@ -23,7 +23,7 @@ function checkboxCount(el) {
     }
 
     if (count === 4) {
-        alert("Please select only 3 checkboxes");
+        alert("Please check off only 3 boxes.");
         el.checked = false;
     }
 }

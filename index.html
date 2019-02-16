@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -5,21 +6,26 @@
         <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="img/my_favicon.png">
-        <title>Daily Phone Usage Survey</title>
+        <title>Phone Usage Survey</title>
     </head>
     <body>
         <div id="wrapper">
             <div id="bezel">
-                <h1 id="title">Daily Phone Usage Survey</h1>
+                <div id="camera"></div>
                 <form id="survey-form">
-                    <p id="description">
-                        The phone has transformed into a Swiss Army Knife of sort over the years. Not only is it used to
-                        talk to another person, the phone has expanded into a web browser, a planner, a video player, a gaming
-                        device, a
-                        mp3 player, and other functions. This survey's purpose is to gain insight into people's relationship with
-                        the
-                        phone.
-                    </p>
+                    <div id="intro">
+                        <h1 id="title">Phone Usage Survey</h1>
+                        <p id="description">
+                            The phone has transformed into a Swiss Army Knife of sort over the years. Not only is it used to
+                            talk to another person, the phone has expanded into a web browser, a planner, a video player, a
+                            gaming
+                            device, a
+                            mp3 player, and other functions. This survey's purpose is to gain insight into people's
+                            relationship with
+                            the
+                            phone.
+                        </p>
+                    </div>
                     <hr>
                     <div class="form-group">
                         <div class="labels">
@@ -54,9 +60,9 @@
                         </div>
                         <div class="input-section">
                             <select name="addiction" id="dropdown" class="input-field">
-                                <option value="need">I need it with me at all time</option>
-                                <option value="scheduled">I set aside time to be on it</option>
-                                <option value="as needed">I fave it at a spot until I use it</option>
+                                <option name="need" value="need">I need it with me at all time</option>
+                                <option name="scheduled" value="scheduled">I set aside time to be on it</option>
+                                <option vname="as needed" value="as needed">It's not on me until I use it</option>
                             </select>
                         </div>
                     </div>
@@ -92,7 +98,8 @@
                                 <input type="checkbox" onClick="checkboxCount(this)" name="games" value="1">Games
                             </label>
                             <label class="input-button">
-                                <input type="checkbox" onClick="checkboxCount(this)" name="browsing" value="2">Internet browsing
+                                <input type="checkbox" onClick="checkboxCount(this)" name="browsing" value="2">Internet
+                                browsing
                             </label>
                             <label class="input-button">
                                 <input type="checkbox" onClick="checkboxCount(this)" name="texting" value="3">Texting
@@ -107,7 +114,7 @@
                     </div>
                     <div class="form-group">
                         <div class="labels">
-                            <label for="comment">Please share any additional comment you may have (optional):</label>
+                            <label for="comment">Please share any comment you may have (optional):</label>
                         </div>
                         <div class="input-section">
                             <textarea name="comment" id="comment" cols="25" rows="5"></textarea>

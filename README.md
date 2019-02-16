@@ -1,4 +1,4 @@
-# Daily Phone Usage Survey
+# Phone Usage Survey
 ### By Safiy Cham
 
 ## Description
